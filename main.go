@@ -2,6 +2,7 @@ package main
 
 import (
         "fmt"
+        "time"
 
         "github.com/yeweishuai/ctrade/okex"
 )
@@ -11,8 +12,9 @@ func main() {
     printn := fmt.Println
 
     if err != nil {
-        Printn("error:%s", err.Error())
+        printn("error:%s", err.Error())
         return
     }
     printn("get okex[%v]\n", okex)
+    time.Sleep(time.Hour)
 }
